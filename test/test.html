@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>简单富文本编辑器示例</title>
+  <style>
+    .toolbar button {
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+<div class="toolbar">
+  <button onclick="execCommand('bold')">粗体</button>
+  <button onclick="execCommand('italic')">斜体</button>
+  <button onclick="execCommand('underline')">下划线</button>
+</div>
+<div contenteditable="true" id="editor" style="border: 1px solid #ccc; padding: 5px;"></div>
+
+<script>
+  function execCommand(command) {
+    document.execCommand(command);
+  }
+</script>
+</body>
+</html>
+
